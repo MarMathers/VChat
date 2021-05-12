@@ -1,0 +1,41 @@
+<nav style="background: #799eb0">
+  {{!-- <div class="container"> --}}
+  <div class="nav-wrapper ">
+
+
+
+
+
+
+    <a href="#" data-target="slide-out" class="sidenav-trigger btn">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <a href="#" class="sidenav-trigger center">
+      {{!-- <img src="/static/gerb.png" </img> --}}
+    </a>
+
+    <a href="#" data-target="contacts-menu" class="sidenav-trigger btn right">
+      <i class="material-icons">contacts</i>
+    </a>
+
+    <a href="#">
+      <span class="logos hide-on-small-and-down">
+        <nobr>Станция видеосвязи</nobr>
+      </span>
+    </a>
+    <ul class="right hide-on-small-and-down valign-wrapper">
+
+      {{#if User}}
+      <li class="abonent_name ">{{User.name}}<br><span style="font-size: 1.2rem;">{{User.place}}</span></li>
+      <li class="logos blue darken-4  ">{{User.number}}</li>
+      <li><a href="/exit/{{User.number}}">
+          <i class="material-icons" style="color:floralwhite">power_settings_new</i>
+        </a></li>
+      {{/if}}
+    </ul>
+
+
+    {{!-- </div> --}}
+  </div>
+</nav>

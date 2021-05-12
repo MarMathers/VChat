@@ -1,0 +1,10 @@
+<script>
+    const user=localStorage.getItem('user_number')
+    console.log('login for ', user)
+    if (user) location=`/user/${user}`
+</script>
+<h1>VideoPhone Web</h1>
+<form action="/login">
+<button class="btn btn-login" type="submit">Login</button>
+</form>
+

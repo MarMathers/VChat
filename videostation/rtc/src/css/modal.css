@@ -1,0 +1,196 @@
+body {
+    display: flex; 
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    /* background: rgb(1, 12, 46); */
+    height: 100vh;
+    /* background: url(/static/fon.jpg) repeat; */
+    background-color: black;
+    background-size: 100%;
+    position: relative;
+}
+main {
+  flex: 1 0 auto; 
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content:center;
+  align-items:stretch;
+}
+
+li.number{
+    padding:5px
+}
+html {
+  height: 100%;
+}
+
+#remoteVideo {
+  flex: 18 0 auto;
+  /* border: 1px solid #333; */
+  max-width:  100vw ;  
+  background: N/A transparent;
+  max-height:  calc( 100vh - 100px );  
+  margin: 5px;
+}
+
+
+#localVideo {
+  flex: 2 0 auto;
+  /* border: 1px solid #333; */
+  background: N/A transparent;
+  margin: 5px;
+  max-width:  100vw ;  
+  max-height:  calc( 100vh - 100px );  
+}
+#contacts {
+  
+  /* border: 1px solid #333; */
+  margin: 5px;
+  background: N/A transparent;
+}
+
+#localVideo.calling {
+  flex: 1 0 auto;
+  /* border: 1px solid #333; */
+  position: fixed;
+  left:5px;
+  background: #000;
+  max-height: 20vh;
+  max-width: 20vh;
+  align-self: flex-start;
+}
+div.modal  {
+  background-color: #799eb0;
+  border: solid 1px;
+  /* padding: 2px; */
+  border-color: darkblue;
+  /* border-radius: 2%; */
+  color: white;
+  /* font-style: oblique; */
+  text-shadow: 2px 2px 3px grey, 1px 1px 1px black;
+}
+.modal .modal-footer{
+  background-color:#799eb0
+}
+.modal-footer{
+  display: grid;
+  grid-template-columns:  auto 20% auto;
+  /* grid-template-rows: auto ; */
+  grid-template-areas: 
+    "accept gap cancel";
+    justify-items: stretch;
+  
+  text-align: center;
+}
+.modal-footer>.btn-flat{
+  gap: 20px;
+  /* width: 30%; */
+  text-align: center;
+
+}
+.progress .indeterminate{
+  background-color: rgb(100, 130, 225);
+  grid-area: progress;
+}
+.prokrutka {
+  flex: 1 0 auto;
+  overflow-y: scroll; /* прокрутка по вертикали */
+  max-height:  calc( 100vh - 100px ); 
+}
+#contacts .contact-bg{
+  background-color: rgba(255,255, 255, 0.9);
+  border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+  margin: 3px;
+} 
+li>a.disabled {
+  pointer-events: none;
+}
+a.disabled>i.material-icons {
+  color:grey
+}
+a.avail>i.material-icons {
+  color:green
+}
+a.busy>i.material-icons {
+  color:red
+}
+div.controlpanel{
+  
+  background-color: rgba(255,255, 255, 0.5);
+  position: absolute;
+  display: flex; 
+  bottom:60px;
+  width: 50vw;
+  padding: 10px;
+  left: 10px;
+
+  
+}
+.logos{
+  font: bold 36px roboto;
+  text-align: center;
+  word-wrap: normal;
+  color: #fff;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  padding-left:5px;padding-right:5px;
+
+}
+.abonent_name{
+  font: bold 24px roboto;
+  color: darkblue;
+    text-shadow: 1px 2px 3px rgb(250, 250, 250,0.8);
+  margin-left:5px;margin-right:5px;
+  line-height: 0.95;
+  text-align: right;
+}
+.grid-wrapper{
+  display:grid;
+
+  grid-template-columns: 70px auto;
+  grid-template-rows: auto ;
+  grid-template-areas: 
+    "logimg vizov"
+    "logimg progress"
+    "name name"
+    "place place"
+    "number number"
+}
+#settings-btn{
+  bottom:30px
+}
+
+a.disabled, a.busy {
+  pointer-events: none;
+}
+.collapsible .collapsible-body{
+  padding:3px;
+  line-height: 36px;
+  
+}
+
+li.disabled {
+  background-color:grey
+}
+li.avail {
+  background-color:#b9f6ca
+}
+li.busy {
+  background-color:#f4ff81
+}
+@media only screen and (min-width:601px){
+  nav a.sidenav-trigger{
+    display:none
+  }
+}
+span.title{
+  display:block;
+  text-align:center; 
+  width:100%;
+  line-height: normal;
+}
+div.statistic{
+  display: block;
+  background-color: darkred;
+  width:50%
+}
